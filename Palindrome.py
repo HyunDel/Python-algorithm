@@ -1,4 +1,5 @@
 from collections import deque
+import re
 
 def Palimdrome(s: str) ->bool:
     # 리스트 방법을 통해서 풀이 
@@ -15,6 +16,8 @@ def Palimdrome(s: str) ->bool:
 
     return True
     """
+    # Deque 방법을 통한 풀이 
+    """
     # deque 방법을 통해서 풀이 
     strs =deque()
     
@@ -27,6 +30,15 @@ def Palimdrome(s: str) ->bool:
             return False 
     
     return True 
+    """
+
+    # 슬라이싱 사용 
+
+    s = s.lower()
+    s = re.sub('[^a-z0-9]','',s)
+
+    return s == s[::-1]
+    
 
 
 
