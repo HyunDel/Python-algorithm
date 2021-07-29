@@ -3,7 +3,7 @@ import re
 from typing import List
 
 
-# 정규식 사용방법 잘알아두기 
+# 정규식 사용
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         words = [word for word in re.sub(r'[^\w]', ' ', paragraph)
