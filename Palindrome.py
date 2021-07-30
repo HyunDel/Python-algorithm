@@ -32,7 +32,7 @@ def Palimdrome(s: str) ->bool:
     return True 
     """
 
-    # 슬라이싱 사용 
+    # 슬라이싱 사용.
 
     s = s.lower()
     s = re.sub('[^a-z0-9]','',s)
